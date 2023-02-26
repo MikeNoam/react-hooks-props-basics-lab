@@ -1,12 +1,21 @@
 import React from "react";
-import App from "./App";
-function About(props) {
+import Links from "./Links";
+
+function About({bio, links}) {
+  
   return (
     <div id="about">
       <h2>About Me</h2>
-      <p>{props.bioObj.bio}</p>
+      
+        {/* if (bio) {
+          <p>bio</p>
+        }
+      */}
+          {bio && <p>{bio}</p>}
+
+      {/* <p>{bio}</p> */}
       <img src="https://i.imgur.com/mV8PQxj.gif" alt="I made this" />
-      {/* { add your <Links />} */}
+    <Links github = {links.github} linkedin = {links.linkedin}/>
       {/* <p>{props.linksObj.links}</p> */}
     </div>
   );
